@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #e3e3e3;
+}
+
+.container {
+  height: 200vh;
+  background: white;
+  overflow: hidden;
+}
+
+.container > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background: paleturquoise;
+  animation-play-state: paused;
+}
+
+.card-left {
+  animation-name: cardLeftAnimation;
+  animation-duration: 1s;
+}
+.card-right {
+  animation-name: cardRightAnimation;
+  animation-duration: 1s;
+}
+
+@keyframes cardLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardRightAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
